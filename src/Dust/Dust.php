@@ -81,6 +81,8 @@ namespace Dust
                 "eq"          => new Helper\Eq(),
                 "any"         => new Helper\Any(),
                 "none"        => new Helper\None(),
+                "first"       => new Helper\First(),
+                "last"        => new Helper\Last(),
                 "if"          => new Helper\IfHelper(),
                 "lt"          => new Helper\Lt(),
                 "lte"         => new Helper\Lte(),
@@ -137,15 +139,6 @@ namespace Dust
             if(substr_compare($path, self::FILE_EXTENSION, -5, 5) !== 0)
             {
                 $path .= self::FILE_EXTENSION;
-            }
-
-            if($basePath != NULL)
-            {
-                $possible = realpath($basePath . '/' . $path);
-                if($possible !== false)
-                {
-                    return $possible;
-                }
             }
 
             //try the current path
