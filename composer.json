@@ -1,5 +1,5 @@
 {
-    "name": "dust-php/dust-php",
+    "name": "devgeniem/dust-php",
     "description": "A templating engine for PHP based on Dust JS",
     "keywords": ["templating", "dust"],
     "homepage": "http://cretz.github.com/dust-php",
